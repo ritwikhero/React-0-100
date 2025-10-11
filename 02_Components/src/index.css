@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+html,
+body {
+  background-color: #111;
+  color: #fff;
+}
+.card {
+  color: black;
+  background-color: pink;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.nav {
+  color: black;
+  background-color: lightblue;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
