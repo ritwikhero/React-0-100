@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+html,
+body {
+  background-color: #111;
+  color: #fff;
+}
+.parent {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  width: 300px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background: #333;
+}
+.card img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 20px 0;
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #111;
+  border-radius: 5px;
+  margin: 5px;
+}
