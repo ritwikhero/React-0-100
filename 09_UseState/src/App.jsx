@@ -1,19 +1,23 @@
-import React from "react";
 import { useState } from "react";
-const App = () => {
-  const [a, setA] = useState(10);
 
+const App = () => {
+  const [count, setCount] = useState(10);
   return (
     <div>
-      <h1>Hi my value is {a}</h1>
+      <h1>Count: {count}</h1>
       <button
         onClick={() => {
-          console.log(a);
-
-          setA(a + 1);
+          setCount(count + 1);
         }}
       >
-        Click
+        Increase
+      </button>
+      <button
+        onClick={() => {
+          setCount(count - 1);
+        }}
+      >
+        Decrease
       </button>
     </div>
   );
