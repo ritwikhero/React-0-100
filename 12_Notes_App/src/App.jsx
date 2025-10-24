@@ -48,6 +48,9 @@ const App = () => {
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXy9Af9x_U5RgKcG0YUiQExGKcnFeQjaQIK1e_kR0y-1aLPH4-g9smYsCXy6x2BrlTUZw&usqp=CAU"
           alt="img"
         /> */}
+        <div className="flex flex-wrap p-10">
+          <div className="h-32 w-32 bg-white"></div>
+        </div>
       </form>
     </div>
   );
