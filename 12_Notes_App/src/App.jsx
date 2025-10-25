@@ -49,7 +49,9 @@ const App = () => {
           alt="img"
         /> */}
         <div className="flex flex-wrap p-10">
-          <div className="h-32 w-32 bg-white"></div>
+          <div className="h-32 w-32 bg-white">
+            {/* yaha pe bahut kuch hoga */}
+          </div>
         </div>
       </form>
     </div>
