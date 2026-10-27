@@ -1,0 +1,21 @@
+import { CORE_CONCEPTS } from "../data.js"; //importing the core concepts data from data.js
+
+// function CoreConcepts(props) {
+//   return (
+//     <li>
+//       <img src={props.image} alt={props.title} />
+//       <h3>{props.title}</h3>
+//       <p>{props.description}</p>
+//     </li>
+//   );
+// }
+
+export default function CoreConcepts({ image, title, description }) {
+  return (
+    <li>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </li>
+  );
+}
