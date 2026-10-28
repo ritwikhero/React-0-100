@@ -1,11 +1,14 @@
+import { useState } from "react";
 import Header from "./components/Header/Header";
 import CoreConcepts from "./components/CoreConcepts";
-import { CORE_CONCEPTS } from "./data";
+import { CORE_CONCEPTS, EXAMPLES } from "./data";
 import TabButton from "./components/TabButton";
 
 function App() {
-  function handleClick() {
-    console.log("hello world");
+  const [selectedButton, setSelectedButton] = useState("");
+  function handleClick(selectedButton) {
+    setSelectedButton(selectedButton);
+    console.log(selectedButton);
   }
 
   return (
@@ -29,12 +32,37 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton handleClick={handleClick}>Components</TabButton>
-            <TabButton handleClick={handleClick}>JSX</TabButton>
-            <TabButton handleClick={handleClick}>Props</TabButton>
-            <TabButton handleClick={handleClick}>State</TabButton>
+            <TabButton
+              isSelected={selectedButton === "components"}
+              handleClick={() => handleClick("components")}
+            >
+              Components
+            </TabButton>
+            <TabButton
+              isSelected={selectedButton === "jsx"}
+              handleClick={() => handleClick("jsx")}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isSelected={selectedButton === "props"}
+              handleClick={() => handleClick("props")}
+            >
+              Props
+            </TabButton>
+            <TabButton handleClick={() => handleClick("state")}>
+              State
+            </TabButton>
           </menu>
-          Dynamic Content
+          {!selectedButton ? (
+            <p>Select a topic from the menu</p>
+          ) : (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectedButton].title}</h3>
+              <p>{EXAMPLES[selectedButton].description}</p>
+              <code>{EXAMPLES[selectedButton].code}</code>
+            </div>
+          )}
         </section>
       </main>
     </div>
