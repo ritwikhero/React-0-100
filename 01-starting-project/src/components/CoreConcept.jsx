@@ -1,8 +1,9 @@
 import CoreConcepts from "./CoreConcepts";
 import { CORE_CONCEPTS } from "../data";
+import Section from "./Section";
 export default function CoreConcept() {
   return (
-    <section id="core-concepts">
+    <Section id="core-concepts">
       <h2>Core concepts</h2>
       <ul>
         {/* <CoreConcepts
@@ -17,6 +18,6 @@ export default function CoreConcept() {
           <CoreConcepts key={item.title} {...item} />
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }
